@@ -48,10 +48,16 @@ body {
   background-color: var(--bg-red);
 }
 
+.TitlePos {
+  position: absolute;
+  left: 150px;
+}
+
 /*------1.2 Typography-----*/
 
 .Title {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-weight: bolder;
-  font-size: clamp(10rem, -0.875rem + 8.333vw, 20rem);
+  font-size: clamp(15rem, -0.875rem + 8.333vw, 40rem);
+  letter-spacing: 1rem;
 }
