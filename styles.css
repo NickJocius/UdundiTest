@@ -128,26 +128,26 @@ nav {
 /*-------2.3 Hr------*/
 
 .hr1 {
-  height: 10px;
+  height: 3px !important;
   border: none;
   background: rgb(97, 24, 24);
   background: -moz-linear-gradient(
     140deg,
     rgba(97, 24, 24, 1) 29%,
     rgba(145, 97, 69, 0.9780287114845938) 59%,
-    rgba(191, 127, 90, 0.9248074229691877) 87%
+    rgba(191, 127, 90, 0.623) 87%
   );
   background: -webkit-linear-gradient(
     140deg,
     rgba(97, 24, 24, 1) 29%,
     rgba(145, 97, 69, 0.9780287114845938) 59%,
-    rgba(191, 127, 90, 0.9248074229691877) 87%
+    rgba(191, 127, 90, 0.623) 87%
   );
   background: linear-gradient(
     140deg,
     rgba(97, 24, 24, 1) 29%,
     rgba(145, 97, 69, 0.9780287114845938) 59%,
-    rgba(191, 127, 90, 0.9248074229691877) 87%
+    rgba(191, 127, 90, 0.623) 87%
   );
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#611818",endColorstr="#bf7f5a",GradientType=1);
 }
@@ -155,6 +155,11 @@ nav {
 /*------3.1 Explore------*/
 #exploreBtn {
   z-index: 999;
+}
+
+.card-text {
+  height: 55%;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 /*------3.2 Close btn-----*/
 .btn-close {
@@ -199,7 +204,8 @@ nav {
 
   .card-text {
     font-size: clamp(0.75rem, -0.875rem + 8.333vw, 1rem);
-    margin-bottom: 10px !important;
+    margin-bottom: 20px !important;
+    height: 75%;
   }
 
   .card-body a {
@@ -210,5 +216,6 @@ nav {
     max-width: 100vw;
     margin-left: 5rem;
     margin: auto;
+    min-height: 100vh;
   }
 }

@@ -6,8 +6,8 @@
 //Description: Custom javascript animations for Udundi Test Project
 //
 
-window.addEventListener('load', Explore);
-const explore = document.getElementById('Explore');
+window.addEventListener('load', explore);
+const exploreCont = document.getElementById('Explore');
 const card = document.getElementById('Card');
 const exploreBtn = document.getElementById('exploreBtn');
 exploreBtn.addEventListener('click', divExpand);
@@ -17,7 +17,8 @@ const closeBtn = document.getElementById('closeBtn');
 closeBtn.addEventListener('click', divShrink);
 const cardBody = document.getElementById('cardBody');
 
-function Explore() {
+// Animation for Explore Title upon load -----------
+function explore() {
 
     let slideIn = [
         {opacity: '0%'},
@@ -39,12 +40,14 @@ function Explore() {
         easing: 'ease-out'
     }
 
-    let an = explore.animate(slideIn, slideTiming);
+    let an = exploreCont.animate(slideIn, slideTiming);
     an.finished.then(() => {
-        explore.classList.remove('opaque');
+        exploreCont.classList.remove('opaque');
     })
 
 }
+
+// function for animating div pop up -------------
 
 function divExpand() {
     let fadeIn = [
@@ -114,6 +117,7 @@ function divExpand() {
     
 
 }
+//-------- Function for animation upon closing pop up -------
 
 function divShrink() {
     let fadeIn = [
