@@ -54,7 +54,7 @@ function divExpand() {
     ]
     let fadeInTiming = {
         fill: 'forwards',
-        duration: 500,
+        duration: 1000,
         easing: 'ease-in'
     }
     let fadeOut = [
@@ -123,18 +123,18 @@ function divShrink() {
     ]
     let fadeTiming = {
         fill: 'forwards',
-        duration: 300,
+        duration: 500,
         easing: 'ease-in'
     }
     let fadeOut = [
-        {opacity: '100%'},
-        {opacity: '50%'},
+        {opacity: '90%'},
+        {opacity: '20%'},
         { opacity: '0%' },
     ]
     let fadeOutTiming = {
         fill: 'forwards',
         duration: 100,
-        easing: 'ease-out'
+        easing: 'ease-in'
     }
     let cardShrink = [
         
@@ -173,12 +173,12 @@ function divShrink() {
         easing: 'linear'
     }
     cardBody.animate(fadeOut, fadeOutTiming);
+    
     let shrinking = card.animate(cardShrink, shrinkTiming);
     exploreBtn.animate(fadeIn, fadeTiming);
     exploreTitle.animate(fadeIn, fadeTiming);
+    card.classList.add('collapse');
     shrinking.finished.then(() => {
-        card.classList.add('collapse');
-        
         exploreTitle.classList.remove('hidden');
         exploreSpan.classList.remove('hidden');
     })
