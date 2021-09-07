@@ -12,21 +12,25 @@ const card = document.getElementById('Card');
 const exploreBtn = document.getElementById('exploreBtn');
 exploreBtn.addEventListener('click', divExpand);
 const exploreTitle = document.getElementById('exploreTitle');
+const exploreSpan = document.getElementById('exploreSpan');
 const closeBtn = document.getElementById('closeBtn');
 closeBtn.addEventListener('click', divShrink);
+const cardBody = document.getElementById('cardBody');
 
 function Explore() {
 
     let slideIn = [
         {opacity: '0%'},
-        { left: '-1000px' },
-        { left: '-500px' },
-        { left: '-250px' },
+        { marginLeft: '-3000px' },
+        { marginLeft: '-1500px' },
+        { marginLeft: '-1250px' },
         {opacity: '50%'},
-        { left: '0px' },
-        { left: '50px' },
+        { marginLeft: '-1000px' },
+        { marginLeft: '-600px' },
         { opacity: '100%' },
-        {left: '150px'}
+        { marginLeft: '-18rem' },
+        { marginLeft: '-250px' },
+        {marginLeft: '-17rem'}
     ]
 
     let slideTiming = {
@@ -37,12 +41,22 @@ function Explore() {
 
     let an = explore.animate(slideIn, slideTiming);
     an.finished.then(() => {
-        explore.classList.remove('hidden');
+        explore.classList.remove('opaque');
     })
 
 }
 
 function divExpand() {
+    let fadeIn = [
+        {opacity: '0%'},
+        {opacity: '50%'},
+        { opacity: '100%' },
+    ]
+    let fadeInTiming = {
+        fill: 'forwards',
+        duration: 500,
+        easing: 'ease-in'
+    }
     let fadeOut = [
         {opacity: '100%'},
         {opacity: '50%'},
@@ -55,26 +69,29 @@ function divExpand() {
     }
     let cardGrow = [
         
-        {   
-            left: '-200px',
+        {   marginLeft: '-15rem',
             height: '0rem',
             width: '0rem',
             opacity: '0%'
         },
-        {left: '-100px',
+        {
+            marginLeft: '-16rem',
         height: '5rem',
         width: '5rem',
         opacity: '10%'},
-        { left: '-50px',
+        {
+            marginLeft: '-317px',
         height: '10rem',
         width: '10rem',
         opacity: '30%'},
-        { left: '10px',
+        {
+            marginLeft: '-18px',
         height: '20rem',
         width: '20rem',
             opacity: '60%'
         },
-        {left: '10px',
+        {
+            marginLeft: '-20px',
         height: '40rem',
         width: '30rem',
         opacity: '100%'}
@@ -85,10 +102,13 @@ function divExpand() {
         duration: 200,
         easing: 'linear'
     }
-    let fade = explore.animate(fadeOut, fadeTiming);
+    let fade = exploreTitle.animate(fadeOut, fadeTiming);
+    exploreBtn.animate(fadeOut, fadeTiming);
     fade.finished.then(() => {
-        
+        exploreTitle.classList.add('hidden');
+        exploreSpan.classList.add('hidden');
         card.animate(cardGrow, growTiming);
+        cardBody.animate(fadeIn, fadeInTiming);
         card.classList.remove('collapse');
     })
     
@@ -103,35 +123,45 @@ function divShrink() {
     ]
     let fadeTiming = {
         fill: 'forwards',
-        duration: 200,
+        duration: 300,
         easing: 'ease-in'
+    }
+    let fadeOut = [
+        {opacity: '100%'},
+        {opacity: '50%'},
+        { opacity: '0%' },
+    ]
+    let fadeOutTiming = {
+        fill: 'forwards',
+        duration: 100,
+        easing: 'ease-out'
     }
     let cardShrink = [
         
         {
-            left: '10px',
+            
             height: '40rem',
             width: '30rem',
             opacity: '100%'},
             {
-                left: '-10px',
+                
                 height: '20rem',
                 width: '20rem',
                 opacity: '60%'
             },
         {
-            left: '-50px',
+            
             height: '10rem',
             width: '10rem',
             opacity: '20%'},
         {
-            left: '-100px',
+            
             height: '5rem',
             width: '5rem',
             opacity: '10%'
         },
         {
-            left: '-200px',
+            
             height: '0rem',
             width: '0rem',
             opacity: '0%'}
@@ -142,10 +172,14 @@ function divShrink() {
         duration: 200,
         easing: 'linear'
     }
-
+    cardBody.animate(fadeOut, fadeOutTiming);
     let shrinking = card.animate(cardShrink, shrinkTiming);
+    exploreBtn.animate(fadeIn, fadeTiming);
+    exploreTitle.animate(fadeIn, fadeTiming);
     shrinking.finished.then(() => {
         card.classList.add('collapse');
-        explore.animate(fadeIn, fadeTiming);
+        
+        exploreTitle.classList.remove('hidden');
+        exploreSpan.classList.remove('hidden');
     })
 }

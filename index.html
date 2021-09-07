@@ -9,44 +9,46 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous">
 </head>
 <body>
-    <main class="Home container-fluid p-0 m-0">
-        <div class="row h-100 w-100">
-            <div class="SolidCol col-3 p-0 m-0"></div>
+    <main class="Home container-fluid p-0 m-0 ">
+        <div class="row h-100 w-100 m-0">
+            <div class="SolidCol col-3 p-0 m-0 ColorCol"></div>
             <div class="col-9 p-0 m-0 ">
-                <section class="TitleCont container-lg d-flex flex-column justify-content-end pb-4 w-100 position-relative">
-                    <div class="TitlePos hidden translate-middle-x d-inline" id="Explore">
+                <section class="TitleCont container-fluid d-flex flex-column justify-content-end p-0 ">
+                    
+                    <div class="TitlePos mw-100 " id="Explore">
                         <h1 class="Title text-white mb-0" id="exploreTitle">Explore</h1>
-                        <div class="d-flex flex-row justify-content-start align-items-center">
-                            <button type="button" id="exploreBtn" class="btn btn-sm ps-5"><img alt="plus icon" src="./assets/images/Plus.svg"></button><span class="text-white fs-4 ps-3">More Details</span>
+                        <div class="d-flex flex-row justify-content-start align-items-center align-content-end">
+                            <div class="card collapse mw-100"  id="Card">
+                                <div class=" d-flex flex-row justify-content-end p-2 ">
+                                    <button type="button" class="btn-close redText" id="closeBtn" aria-label="Close"></button>
+                                </div>
+                                <div class="card-body p-5 h-100 " id="cardBody">
+                                    <h1 class="card-title redText" id="cardTitle">Explore</h1>
+                                    <hr class="hr1 w-50 "/>
+                                    <p class="card-text h-75 lh-lg">Lorem ipsum dolor sit, amet consectetur 
+                                        adipisicing elit. Illum, ipsum corrupti 
+                                        consequuntur voluptatibus voluptatem at, 
+                                        atque quisquam consequatur quae ipsa eligendi cupiditate 
+                                        voluptatum dolorum aperiam aliquam dolores aliquid asperiores 
+                                        ducimus? Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
+                                        Voluptate magnam dolorem repudiandae, dolore rem, sunt minus 
+                                        excepturi placeat quos ea eaque autem mollitia perspiciatis quia optio a. Fugiat, odit deserunt.
+                                    </p>
+                                    <a href="#" class="btn  redGradient text-white w-50">READ MORE</a>
+                                </div>
+                            </div>
+                            <button type="button" id="exploreBtn" class="btn btn-sm ps-5"><img alt="plus icon" src="./assets/images/Plus.svg"></button><span id="exploreSpan" class="text-white fs-4 ps-3">More Details</span>
                         </div>
                     </div>
-                    <div class="card translate-middle-x  collapse"  id="Card">
-                        <div class="d-flex flex-row justify-content-end p-2">
-                            <button type="button" class="btn-close redText" id="closeBtn" aria-label="Close"></button>
+                    
+                    <nav class="container-fluid d-flex flex-row justify-content-end mb-5 mx-0 p-0">
+                        <div class="container-fluid d-flex flex-column align-items-end">
+                            <a href="#" class="my-1 py-1"><img alt="facebook icon" src="./assets/images/Facebook.svg"></a>
+                            <a href="#" class="my-1 py-1"><img alt="facebook icon" src="./assets/images/Instagram.svg"></a>
                         </div>
-                        
-                        <div class="card-body p-5 h-100 ">
-                            <h1 class="card-title redText" id="cardTitle">Explore</h1>
-                            <hr class="hr1 w-50 "/>
-                            <p class="card-text h-75 lh-lg">Lorem ipsum dolor sit, amet consectetur 
-                                adipisicing elit. Illum, ipsum corrupti 
-                                consequuntur voluptatibus voluptatem at, 
-                                atque quisquam consequatur quae ipsa eligendi cupiditate 
-                                voluptatum dolorum aperiam aliquam dolores aliquid asperiores 
-                                ducimus? Lorem ipsum, dolor sit amet consectetur adipisicing elit. 
-                                Voluptate magnam dolorem repudiandae, dolore rem, sunt minus 
-                                excepturi placeat quos ea eaque autem mollitia perspiciatis quia optio a. Fugiat, odit deserunt.
-                            </p>
-                            <a href="#" class="btn  redGradient text-white w-50">READ MORE</a>
-                        </div>
-                    </div>
+                    </nav>
                 </section>
-                <nav class="container-fluid d-flex flex-row justify-content-end mb-5 p-0">
-                    <div class="container-fluid d-flex flex-column align-items-end">
-                        <a href="#" class="my-1"><img alt="facebook icon" src="./assets/images/Facebook.svg"></a>
-                        <a href="#" class="my-1 py-1"><img alt="facebook icon" src="./assets/images/Instagram.svg"></a>
-                    </div>
-                </nav>
+                
             </div>
 
         </div>

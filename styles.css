@@ -20,6 +20,8 @@ Description: Basic global styles for Udundi Test Project
     3.1 Explore
     3.2 Close btn
 
+4. Media Queries
+
 */
 
 /*------Global------*/
@@ -36,12 +38,22 @@ html {
 body {
   min-width: 100%;
   min-height: 100%;
+  overflow: hidden;
+}
+
+nav {
+  min-width: 100%;
 }
 
 /*------1.1 General------*/
 .Home {
   background: no-repeat right / cover
     url("./assets/images/Coding-Challenge-Image.png");
+  min-height: 100vh;
+}
+
+.ColorCol {
+  min-height: 100vh;
 }
 
 .TitleCont {
@@ -53,14 +65,16 @@ body {
 }
 
 .TitlePos {
-  position: absolute;
-  left: -1000px;
+  min-width: 100%;
+  margin-left: -17rem;
+}
+
+.opaque {
+  opacity: 0;
 }
 
 #Card {
-  position: absolute;
-  left: -200px;
-  bottom: 75px;
+  margin-left: -17rem;
 }
 
 .hidden {
@@ -72,8 +86,8 @@ body {
 .Title {
   font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
   font-weight: bolder;
-  font-size: clamp(15rem, -0.875rem + 8.333vw, 40rem);
-  letter-spacing: 1rem;
+  font-size: clamp(14rem, -0.875rem + 8.333vw, 38rem);
+  letter-spacing: 0.8rem;
 }
 
 .redText {
@@ -137,7 +151,9 @@ body {
 }
 
 /*------3.1 Explore------*/
-
+#exploreBtn {
+  z-index: 999;
+}
 /*------3.2 Close btn-----*/
 .btn-close {
   color: #611818 !important;
@@ -145,4 +161,8 @@ body {
 
 .btn-close:hover {
   color: #611818 !important;
+}
+
+/*-----Media queries-----*/
+@media screen and (min-width: 990px) {
 }
