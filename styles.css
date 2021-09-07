@@ -60,6 +60,7 @@ body {
 #Card {
   position: absolute;
   left: -200px;
+  bottom: 75px;
 }
 
 .hidden {
