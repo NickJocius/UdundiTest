@@ -9,12 +9,16 @@ Description: Basic global styles for Udundi Test Project
 
     1.1 General
     1.2 Typography
+    1.3 Backgrounds
 
-2. Icon Nav
-
+2. Text Box
+    2.1 Text
+    2.2 Title
+    2.3 Hr
 
 3. Buttons
-
+    3.1 Explore
+    3.2 Close btn
 
 */
 
@@ -50,7 +54,16 @@ body {
 
 .TitlePos {
   position: absolute;
-  left: 150px;
+  left: -1000px;
+}
+
+#Card {
+  position: absolute;
+  left: -200px;
+}
+
+.hidden {
+  display: none !important;
 }
 
 /*------1.2 Typography-----*/
@@ -60,4 +73,75 @@ body {
   font-weight: bolder;
   font-size: clamp(15rem, -0.875rem + 8.333vw, 40rem);
   letter-spacing: 1rem;
+}
+
+.redText {
+  color: var(--bg-red);
+}
+
+#cardTitle {
+  font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+}
+
+/*-----1.3 Backgrounds-----*/
+
+.redGradient {
+  background: rgb(97, 24, 24);
+  background: -moz-linear-gradient(
+    140deg,
+    rgba(97, 24, 24, 1) 29%,
+    rgba(145, 97, 69, 0.9780287114845938) 59%,
+    rgba(191, 127, 90, 0.9248074229691877) 87%
+  );
+  background: -webkit-linear-gradient(
+    140deg,
+    rgba(97, 24, 24, 1) 29%,
+    rgba(145, 97, 69, 0.9780287114845938) 59%,
+    rgba(191, 127, 90, 0.9248074229691877) 87%
+  );
+  background: linear-gradient(
+    140deg,
+    rgba(97, 24, 24, 1) 29%,
+    rgba(145, 97, 69, 0.9780287114845938) 59%,
+    rgba(191, 127, 90, 0.9248074229691877) 87%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#611818",endColorstr="#bf7f5a",GradientType=1);
+}
+
+/*-------2.3 Hr------*/
+
+.hr1 {
+  height: 10px;
+  border: none;
+  background: rgb(97, 24, 24);
+  background: -moz-linear-gradient(
+    140deg,
+    rgba(97, 24, 24, 1) 29%,
+    rgba(145, 97, 69, 0.9780287114845938) 59%,
+    rgba(191, 127, 90, 0.9248074229691877) 87%
+  );
+  background: -webkit-linear-gradient(
+    140deg,
+    rgba(97, 24, 24, 1) 29%,
+    rgba(145, 97, 69, 0.9780287114845938) 59%,
+    rgba(191, 127, 90, 0.9248074229691877) 87%
+  );
+  background: linear-gradient(
+    140deg,
+    rgba(97, 24, 24, 1) 29%,
+    rgba(145, 97, 69, 0.9780287114845938) 59%,
+    rgba(191, 127, 90, 0.9248074229691877) 87%
+  );
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#611818",endColorstr="#bf7f5a",GradientType=1);
+}
+
+/*------3.1 Explore------*/
+
+/*------3.2 Close btn-----*/
+.btn-close {
+  color: #611818 !important;
+}
+
+.btn-close:hover {
+  color: #611818 !important;
 }
